@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function CountriesList({ countries }) {
   return (
@@ -11,7 +11,7 @@ function CountriesList({ countries }) {
         >
           {countries.map((elem) => {
             return (
-              <NavLink
+              <Link
                 to={`/country/${elem.alpha3Code.toLowerCase()}`}
                 className="list-group"
               >
@@ -21,7 +21,7 @@ function CountriesList({ countries }) {
                   alt="country-flag"
                 />
                 <p>{elem.name.common}</p>
-              </NavLink>
+              </Link>
             );
           })}
         </div>
