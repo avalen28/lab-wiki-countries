@@ -14,6 +14,7 @@ function CountriesList({ countries }) {
               <Link
                 to={`/country/${elem.alpha3Code.toLowerCase()}`}
                 className="list-group"
+                key={elem._id}
               >
                 <img
                   className="list-group-item list-group-item-action"
